@@ -7,7 +7,7 @@ terraform {
     }
   }
   cloud {
-    organization = "platform-engineering-demo"  # Change to your TFC org name later
+    organization = "platform-engineering-demo-ivan"  # Change to your TFC org name later
     workspaces {
       name = "cnc-logging-dev"
     }
