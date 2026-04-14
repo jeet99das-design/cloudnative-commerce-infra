@@ -48,8 +48,7 @@ variable "owner_email" {
 }
 
 resource "aws_s3_bucket" "logs" {
-  bucket = "${var.bucket_prefix}-${data.aws_caller_identity.current.account_id}-${var.environment}"
-  
+  bucket_prefix = "${var.bucket_prefix}-${var.environment}-"  
   tags = {
     Owner = var.owner_email
   }
