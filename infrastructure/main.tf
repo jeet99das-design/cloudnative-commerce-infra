@@ -9,7 +9,7 @@ terraform {
   cloud {
     organization = "platform-engineering-demo"  # Change to your TFC org name later
     workspaces {
-      name = "cnc-logging-${var.environment}"
+      name = "cnc-logging-dev"
     }
   }
 }
@@ -44,7 +44,7 @@ variable "bucket_prefix" {
 
 variable "owner_email" {
   type = string
-  default = jeet99das@gmail.com
+  default = "jeet99das@gmail.com"
 }
 
 resource "aws_s3_bucket" "logs" {
