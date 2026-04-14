@@ -81,3 +81,12 @@ resource "aws_s3_bucket_public_access_block" "logs_public_block" {
 output "bucket_arn" {
   value = aws_s3_bucket.logs.arn
 }
+
+resource "aws_instance" "web" {
+  ami           = "ami-0a0823e4ea064404d" # Amazon Linux (may vary slightly by region)
+  instance_type = "t3.micro"
+
+  tags = {
+    Name = "cnc-web-${var.environment}"
+  }
+}
